@@ -8,5 +8,18 @@ namespace Semana02DPA_MVC.Controllers
         {
             return View();
         }
+
+        [HttpPost]
+        public IActionResult Validate(string email, string password)
+        {
+            if (email == "admin@peru.com" && password == "admin")
+            {
+                return RedirectToAction("Index", "Home", new { area = "Marketing" });
+            }
+            else
+            {
+                return View("Login");
+            }
+        }
     }
 }
