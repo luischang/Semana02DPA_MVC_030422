@@ -18,6 +18,20 @@ namespace Semana02DPA_MVC.Areas.Marketing.Controllers
             return View("ProductsViewModel", products);
         }
 
+        public IActionResult ProductsViewData() {
+            var products = GetProducts();
+            ViewData["ProductList"] = products;
+            ViewData["TitleViewData"] = "Products with View Data";
+            return View("ProductsViewData");
+        }
+
+        public IActionResult ProductsViewBag()
+        {
+            var products = GetProducts();
+            ViewBag.ProductList = products;
+            ViewBag.TitleViewBag = "Products with View Bag";
+            return View("ProductsViewBag");
+        }
 
         //Get JSON in Product
         private IEnumerable<Product> GetProducts() {
