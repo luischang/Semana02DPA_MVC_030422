@@ -15,8 +15,6 @@
     <Folder Include="Areas\Finanzas\Data\" />
     <Folder Include="Areas\Finanzas\Models\" />
     <Folder Include="Areas\Finanzas\Views\" />
-    <Folder Include="Areas\Marketing\Data\" />
-    <Folder Include="Areas\Marketing\Models\" />
     <Folder Include="Areas\RecursosHumanos\Controllers\" />
     <Folder Include="Areas\RecursosHumanos\Data\" />
     <Folder Include="Areas\RecursosHumanos\Models\" />

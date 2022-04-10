@@ -10,8 +10,12 @@ namespace Semana02DPA_MVC.Controllers
         }
 
         [HttpPost]
-        public IActionResult Validate(string email, string password)
+        //public IActionResult Validate(string correo, string clave)
+        public IActionResult Validate(IFormCollection form)
         {
+            var email = form["correo"];
+            var password = form["clave"];
+
             if (email == "admin@peru.com" && password == "admin")
             {
                 return RedirectToAction("Index", "Home", new { area = "Marketing" });
